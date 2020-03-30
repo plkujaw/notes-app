@@ -1,11 +1,11 @@
 (function(exports) {
-  function Note(note_text) {
-    this.text = note_text;
+  class Note {
+    constructor(note_text) {
+      this.text = note_text;
+    }
+    getText() {
+      return this.text;
+    }
   }
-
-  Note.prototype.getText = function() {
-    return this.text;
-  }
-
   exports.Note = Note;
 })(this)

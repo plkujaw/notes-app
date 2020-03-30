@@ -1,6 +1,8 @@
 (function(exports) {
-  function ListView() {
+  class ListView {
+    constructor(list) {
 
+    }
   }
 
   exports.ListView = ListView;

@@ -1,5 +1,5 @@
 let assert = {
-  isTrue: (test, message) => {
+  isTrue: function(test, message) {
     if (!test) {
       throw new Error(`${message} is red!`);
     } else {
