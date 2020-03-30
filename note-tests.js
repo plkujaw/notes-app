@@ -1,28 +1,29 @@
-function testCreateNote() {
-  var note = new Note(text);
-  var text = note.text;
+testCreateNote = () => {
+  let note = new Note("test note");
+  let text = note.text;
 
-  assert.isTrue(note.text === text);
-};
+  assert.isTrue(note.text === text, "testCreateNote");
+}
 
 testCreateNote();
 
 
-function testAddToList() {
-  var note = new Note("test note 1");
-  var list = new List();
-  addNote(note);
+testAddToList = () => {
+  let note1 = new Note("test note 1");
+  let note2 = new Note("test note 2");
+  let list = new List();
+  list.addNote(note1);
+  list.addNote(note2);
 
-  assert.isTrue(list.notes[0] === note);
-};
+  assert.isTrue(list.notes[0] === note1, "testAddToList");
+  assert.isTrue(list.notes[1] === note2, "testAddToList");
+}
 
 testAddToList();
 
 
+testListView = () => {
 
-// function testCircleRadiusDefaultsTo10() {
-//   var circle = new Circle();
-//   assert.isTrue(circle.radius === 10);
-// };
-//
-// testCircleRadiusDefaultsTo10();
+}
+
+testListView();
