@@ -9,24 +9,25 @@ testCreateNote();
 
 
 function testAddToList() {
-  let note1 = new Note("test note 1");
-  let note2 = new Note("test note 2");
+  let note = new Note("test note 1");
   let list = new List();
-  list.addNote(note1);
-  list.addNote(note2);
+  list.addNote(note);
 
-  assert.isTrue(list.notes[0] === note1, "testAddToList");
-  assert.isTrue(list.notes[1] === note2, "testAddToList");
+  assert.isTrue(list.notes[0] === note, "testAddToList");
 };
 
 testAddToList();
 
-
 function testListView() {
-  let note1 = new Note("test note 1");
-  let note2 = new Note("test note 2");
+  let note = new Note("test note");
   let list = new List();
   let listview = new ListView(list);
+  let htmlString = "<ul>" + "<li>" + "<div>" + note.getText() + "</div>" + "</li>" + "</ul>"
+
+  list.addNote(note);
+
+  assert.isTrue(listview.getHtmlString() === htmlString, "testListView");
+
 };
 
 testListView();

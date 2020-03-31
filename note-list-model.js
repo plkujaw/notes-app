@@ -1,6 +1,7 @@
 (function(exports) {
+
   class List {
-    constructor() {
+    constructor(note) {
       this.notes = [];
     }
 
@@ -12,5 +13,6 @@
       return this.notes;
     }
   }
+
   exports.List = List;
 })(this)
