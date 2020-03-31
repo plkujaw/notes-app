@@ -10,13 +10,12 @@
     }
 
     getHtmlString() {
-      let htmlString = "<ul>";
-      for (let i = 0; i < this.list.notes.length; i++) {
-        htmlString = htmlString + "<li>" + "<div>" + this.list.notes[i].getText() + "</div>" + "</li>";
-
+      let html_string = "<ul>";
+      for (let i = 0; i < this.list.getNotes().length; i++) {
+        html_string = html_string + "<li>" + "<div>" + this.getList().notes[i] + "</div>" + "</li>";
       }
-      htmlString = htmlString + "</ul>";
-      return htmlString;
+      html_string = html_string + "</ul>";
+      return html_string;
     }
   }
 

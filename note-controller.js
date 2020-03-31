@@ -7,7 +7,7 @@
     }
     showHtml() {
       let app = document.getElementById("app");
-      app.innerHTML = this.noteListView.getList().notes;
+      app.innerHTML = this.noteListView.getHtmlString();
     }
   }
 

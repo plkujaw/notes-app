@@ -21,12 +21,14 @@ testAddToList();
 function testListView() {
   let note = new Note("test note");
   let list = new List();
-  let listview = new ListView(list);
-  let htmlString = "<ul>" + "<li>" + "<div>" + note.getText() + "</div>" + "</li>" + "</ul>"
+  let list_view = new ListView(list);
+  let html_string = "<ul>" + "<li>" + "<div>" + note.getText() + "</div>" + "</li>" + "</ul>"
 
   list.addNote(note);
+  console.log(html_string);
+  console.log(list_view.getHtmlString());
 
-  assert.isTrue(listview.getHtmlString() === htmlString, "testListView");
+  assert.isTrue(list_view.getHtmlString() === html_string, "testListView");
 
 };
 
