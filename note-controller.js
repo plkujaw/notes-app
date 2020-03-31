@@ -1,18 +1,21 @@
-window.onload = function() {
-  // let greeting = document.getElementById('app');
-  // greeting.innerHTML = 'howdy!';
-
+(function(exports) {
 
   class NoteController {
-    constructor(note_list) {
-      this.note_list = new List();
-      this.note = new Note("favorite drink: alcazeltzer");
-      this.note_list.addNote(this.note);
-      this.list_view = new ListView(this.note_list);
+    constructor(noteList) {
+      this.noteList = noteList;
+      this.noteListView = new ListView(noteList);
     }
-
-
-    getHtmlString() {
-
+    showHtml() {
+      let app = document.getElementById("app");
+      app.innerHTML = this.noteListView.getList().notes;
+    }
   }
-}
+
+  exports.NoteController = NoteController;
+})(this);
+
+let list = new List;
+list.addNote("note 1");
+list.addNote("note 2");
+let controller = new NoteController(list);
+controller.showHtml();
