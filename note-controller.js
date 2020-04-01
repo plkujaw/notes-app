@@ -1,13 +1,13 @@
 (function(exports) {
 
   class NoteController {
-    constructor(noteList) {
-      this.noteList = noteList;
-      this.noteListView = new ListView(noteList);
+    constructor(note_list) {
+      this.note_list = note_list;
+      this.note_list_view = new ListView(note_list);
     }
     showHtml() {
       let app = document.getElementById("app");
-      app.innerHTML = this.noteListView.getHtmlString();
+      app.innerHTML = this.note_list_view.getHtmlString();
     }
   }
 

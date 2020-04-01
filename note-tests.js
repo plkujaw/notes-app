@@ -18,6 +18,14 @@ function testAddToList() {
 
 testAddToList();
 
+function testSingleNoteView() {
+  let note = new Note("test note 3");
+  let view_note = new SingleNoteView(note);
+
+
+  assert.isTrue( === , "testSingleNoteView");
+};
+
 // function testListView() {
 //   let note = new Note("test note");
 //   let list = new List();
@@ -25,8 +33,8 @@ testAddToList();
 //   let html_string = "<ul>" + "<li>" + "<div>" + note.getText() + "</div>" + "</li>" + "</ul>"
 //
 //   list.addNote(note);
-//   // console.log(html_string);
-//   // console.log(list_view.getHtmlString());
+//   console.log(html_string);
+//   console.log(list_view.getHtmlString());
 //
 //   assert.isTrue(list_view.getHtmlString() === html_string, "testListView");
 //
