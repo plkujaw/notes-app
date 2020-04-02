@@ -10,7 +10,6 @@
     app.innerHTML = this.note_list_view.getHtmlString();
   }
 
-
   exports.NoteController = NoteController;
 })(this)
 
