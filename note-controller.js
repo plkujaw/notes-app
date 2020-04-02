@@ -15,7 +15,9 @@
 })(this)
 
 let list = new List;
-list.addNote("note 1");
-list.addNote("note 2");
+let note1 = new Note("note 1");
+let note2 = new Note("note 2");
+list.addNote(note1);
+list.addNote(note2);
 let controller = new NoteController(list);
 controller.showHtml();
