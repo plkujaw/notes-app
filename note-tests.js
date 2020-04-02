@@ -8,16 +8,19 @@ function testCreateNote() {
 testCreateNote();
 
 function testAddToList() {
-  let note = new Note("test note 2");
+  let note1 = new Note("test note 1");
+  let note2 = new Note("test note 2");
   let list = new List();
-  list.addNote(note);
-  assert.isTrue(list.notes[0].getText() === note, "testAddToList");
-  assert.isTrue(list.notes[0].id === ((list.notes.length) - 1), "testGetId");
+  list.addNote(note1);
+  list.addNote(note2);
+  assert.isTrue(list.notes[0].getText() === note1, "testAddToList");
+  assert.isTrue(list.notes[0].id === 0, "testGetId0");
+  assert.isTrue(list.notes[1].id === 1, "testGetId1");
 }
 testAddToList();
 
 function testListView() {
-  let note = new Note("test note 3");
+  let note = new Note("test note");
   let list = new List();
   let list_view = new ListView(list);
   let html_string = "<ul><li><div>" + note.getText() + "</div></li></ul>";
@@ -29,7 +32,7 @@ function testListView() {
 testListView();
 
 function testSingleNoteView() {
-  let note = new Note("test note 4");
+  let note = new Note("test note");
   let view_note = new SingleNoteView(note);
   view_note.noteHtml();
   note_html = "<div>" + note.getText() + "</div>";
