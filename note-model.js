@@ -1,13 +1,11 @@
 (function(exports) {
 
-  class Note {
-    constructor(text) {
-      this.text = text;
-    }
+  Note = function(text) {
+    this.text = text;
+  }
 
-    getText() {
-      return this.text;
-    }
+  Note.prototype.getText = function() {
+    return this.text;
   }
 
   exports.Note = Note;

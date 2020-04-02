@@ -1,18 +1,16 @@
 (function(exports) {
 
-  class List {
-    constructor() {
+   List = function () {
       this.notes = [];
     }
 
-    addNote(note) {
+    List.prototype.addNote = function (note) {
       this.notes.push(note);
     }
 
-    getNotes() {
+    List.prototype.getNotes = function () {
       return this.notes;
     }
-  }
 
   exports.List = List;
 })(this)
