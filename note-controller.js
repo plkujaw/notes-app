@@ -16,7 +16,7 @@
 
 let list = new List;
 let note1 = new Note("note 1");
-let note2 = new Note("note 2");
+let note2 = new Note("very long test note to testShortListView");
 list.addNote(note1);
 list.addNote(note2);
 let controller = new NoteController(list);

@@ -13,6 +13,7 @@
 
     for (var i = 0; i < list.length; i++) {
       list[i] = list[i].getText();
+      list[i] = list[i].substring(0, 20);
     }
 
     return "<ul><li><div>" + list.join("</div></li><li><div>") + "</div></li></ul>";
