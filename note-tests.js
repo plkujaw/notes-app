@@ -11,10 +11,9 @@ function testAddToList() {
   let note = new Note("test note 2");
   let list = new List();
   list.addNote(note);
-
-  assert.isTrue(list.notes[0] === note, "testAddToList");
+  assert.isTrue(list.notes[0].getText() === note, "testAddToList");
+  assert.isTrue(list.notes[0].id === ((list.notes.length) - 1), "testGetId");
 }
-
 testAddToList();
 
 function testListView() {
