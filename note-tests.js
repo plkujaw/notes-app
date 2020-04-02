@@ -3,7 +3,7 @@ function testCreateNote() {
   let text = note.text;
 
   assert.isTrue(note.text === text, "testCreateNote");
-};
+}
 
 testCreateNote();
 
@@ -14,7 +14,7 @@ function testAddToList() {
   list.addNote(note);
 
   assert.isTrue(list.notes[0] === note, "testAddToList");
-};
+}
 
 testAddToList();
 
@@ -24,7 +24,7 @@ function testSingleNoteView() {
 
 
   assert.isTrue( === , "testSingleNoteView");
-};
+}
 
 // function testListView() {
 //   let note = new Note("test note");
