@@ -15,7 +15,7 @@
       list[i] = list[i].text.substring(0, 20);
     }
 
-    let html_string = "<ul><li><div>" + list.join("</div></li><li><div>") + "</div></li></ul>";
+    let html_string = `<ul><li><div>${list.join("</div></li><li><div>")}</div></li></ul>`;
 
     return html_string;
 

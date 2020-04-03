@@ -1,8 +1,8 @@
 function testCreateNote() {
   let note = new Note("test note");
-  let text = note.text;
+  let note_text = note.text;
 
-  assert.isTrue(note.text === text, "testCreateNote");
+  assert.isTrue(note.text === note_text, "testCreateNote");
 }
 
 testCreateNote();
@@ -22,7 +22,7 @@ function testListView() {
   let list = new List();
   list.addNote("test note");
   let list_view = new ListView(list);
-  let html_string = "<ul><li><div>" + list.notes[0].text + "</div></li></ul>";
+  let html_string = `<ul><li><div>${list.notes[0].text}</div></li></ul>`;
 
   assert.isTrue(list_view.getHtmlString() === html_string, "testListView");
 }
@@ -35,7 +35,7 @@ function testSingleNoteView() {
   let note_text = list.notes[0].text;
   let view_note = new SingleNoteView(note_text);
   view_note.noteHtml();
-  note_html = "<div>" + note_text + "</div>";
+  note_html = `<div>${note_text}</div>`;
 
   assert.isTrue(view_note.noteHtml() === note_html, "testSingleNoteView");
 }
@@ -48,7 +48,7 @@ function testShortListView() {
   let list_view = new ListView(list);
   let short_note = "very long test note "
 
-  assert.isTrue(list_view.getHtmlString() === "<ul><li><div>" + short_note + "</div></li></ul>", "testShortListView")
+  assert.isTrue(list_view.getHtmlString() === `<ul><li><div>${short_note}</div></li></ul>`, "testShortListView")
 }
 
 testShortListView();
