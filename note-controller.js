@@ -30,12 +30,13 @@
       event.preventDefault();
 
       let text = document.getElementById("textarea").value;
-      self.note_list.addNote(text);
-
-      let app = document.getElementById("app");
-      app.innerHTML = self.note_list_view.getHtmlString();
-
-      console.log(`Note ${text} added`);
+      if (text.length != 0) {
+        self.note_list.addNote(text);;
+        let app = document.getElementById("app");
+        app.innerHTML = self.note_list_view.getHtmlString();
+        console.log(`Note ${text} added`);
+      } else
+        window.alert("Cannot add an empty note.");
     })
   }
 
