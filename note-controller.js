@@ -3,8 +3,8 @@
   NoteController = function(note_list = new List) {
     this.note_list = note_list;
     this.note_list_view = new ListView(this.note_list);
-    this.note_list.addNote("note 1");
-    this.note_list.addNote("very long test note to testShortListView");
+    // this.note_list.addNote("note 1");
+    // this.note_list.addNote("very long test note to testShortListView");
   }
 
   NoteController.prototype.showHtml = function() {
@@ -29,9 +29,18 @@
 
   NoteController.prototype.submitForm = function() {
 
+    let self = this;
+
     text.addEventListener("submit", function() {
-      console.log("Note added");
       event.preventDefault();
+
+      let text = document.getElementById("textarea").value;
+      self.note_list.addNote(text);
+
+      let app = document.getElementById("app");
+      app.innerHTML = self.note_list_view.getHtmlString();
+
+      console.log(`Note ${text} added`);
     })
 
   }
