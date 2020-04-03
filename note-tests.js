@@ -28,7 +28,7 @@ function testListView() {
   assert.isTrue(list_view.getHtmlString() === html_string, "testListView");
 }
 
-testListView();
+// testListView();
 
 function testSingleNoteView() {
   let list = new List();
