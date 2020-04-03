@@ -18,7 +18,7 @@
 
     html += "</ul>";
     return html;
-
   }
+
   exports.ListView = ListView;
 })(this)

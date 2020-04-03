@@ -9,5 +9,4 @@
   }
 
   exports.SingleNoteView = SingleNoteView;
-
 })(this)
