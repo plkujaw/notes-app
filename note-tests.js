@@ -49,7 +49,7 @@ function testShortListView() {
   let list_view = new ListView(list);
   let short_note = "very long test note ";
 
-  assert.isTrue(list_view.getHtmlString() === `<ul><li><div><a href='#'>${short_note}</a></div></li></ul>`, "testShortListView")
+  assert.isTrue(list_view.getHtmlString() === `<ul><li><div><a href='#notes/${list.notes[0].id}'>${short_note}</a></div></li></ul>`, "testShortListView")
 }
 
 // testShortListView();

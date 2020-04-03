@@ -1,8 +1,10 @@
 (function(exports) {
 
-  NoteController = function(note_list) {
+  NoteController = function(note_list = new List) {
     this.note_list = note_list;
-    this.note_list_view = new ListView(note_list);
+    this.note_list_view = new ListView(this.note_list);
+    this.note_list.addNote("note 1");
+    this.note_list.addNote("very long test note to testShortListView");
   }
 
   NoteController.prototype.showHtml = function() {
@@ -10,11 +12,23 @@
     app.innerHTML = this.note_list_view.getHtmlString();
   }
 
+  NoteController.prototype.displayNote = function() {
+    let self = this;
+
+    window.addEventListener("hashchange", function() {
+      let note_id = window.location.hash.split("#notes/")[1];
+
+      let notes = document.getElementById("notes");
+
+      notes.innerHTML = self.note_list.notes[note_id].text;
+    })
+
+  }
+
   exports.NoteController = NoteController;
 })(this)
 
-let list = new List;
-list.addNote("note 1");
-list.addNote("very long test note to testShortListView");
-let controller = new NoteController(list);
+// let list = new List;
+let controller = new NoteController();
 controller.showHtml();
+controller.displayNote();
