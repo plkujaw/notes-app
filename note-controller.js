@@ -15,6 +15,8 @@
 
 let list = new List;
 list.addNote("note 1");
+console.log(list.notes[0].id);
 list.addNote("very long test note to testShortListView");
+console.log(list.notes[1].id);
 let controller = new NoteController(list);
 controller.showHtml();

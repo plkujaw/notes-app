@@ -11,11 +11,11 @@
   ListView.prototype.getHtmlString = function() {
     let list = this.list.notes;
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
       list[i] = list[i].text.substring(0, 20);
     }
 
-    let html_string = `<ul><li><div>${list.join("</div></li><li><div>")}</div></li></ul>`;
+    let html_string = `<ul><li><div><a href=''>${list.join("</a></div></li><li><div><a href=''>")}</a></div></li></ul>`;
 
     return html_string;
 

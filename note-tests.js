@@ -21,8 +21,9 @@ testAddToList();
 function testListView() {
   let list = new List();
   list.addNote("test note");
+  list.addNote("test note 2");
   let list_view = new ListView(list);
-  let html_string = `<ul><li><div>${list.notes[0].text}</div></li></ul>`;
+  let html_string = `<ul><li><div><a href=''>${list.notes[0].text}</a></div></li><li><div><a href=''>${list.notes[1].text}</a></div></li></ul>`;
 
   assert.isTrue(list_view.getHtmlString() === html_string, "testListView");
 }
@@ -46,9 +47,9 @@ function testShortListView() {
   let list = new List();
   list.addNote("very long test note to testShortListView");
   let list_view = new ListView(list);
-  let short_note = "very long test note "
+  let short_note = "very long test note ";
 
-  assert.isTrue(list_view.getHtmlString() === `<ul><li><div>${short_note}</div></li></ul>`, "testShortListView")
+  assert.isTrue(list_view.getHtmlString() === `<ul><li><div><a href=''>${short_note}</a></div></li></ul>`, "testShortListView")
 }
 
 testShortListView();
