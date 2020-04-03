@@ -13,6 +13,7 @@
   }
 
   NoteController.prototype.displayNote = function() {
+
     let self = this;
 
     window.addEventListener("hashchange", function() {
@@ -25,6 +26,16 @@
 
   }
 
+
+  NoteController.prototype.submitForm = function() {
+
+    text.addEventListener("submit", function() {
+      console.log("Note added");
+      event.preventDefault();
+    })
+
+  }
+
   exports.NoteController = NoteController;
 })(this)
 
@@ -32,3 +43,4 @@
 let controller = new NoteController();
 controller.showHtml();
 controller.displayNote();
+controller.submitForm();
