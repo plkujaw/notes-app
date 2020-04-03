@@ -14,9 +14,7 @@
 })(this)
 
 let list = new List;
-let note1 = new Note("note 1");
-let note2 = new Note("very long test note to testShortListView");
-list.addNote(note1);
-list.addNote(note2);
+list.addNote("note 1");
+list.addNote("very long test note to testShortListView");
 let controller = new NoteController(list);
 controller.showHtml();

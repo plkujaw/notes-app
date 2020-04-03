@@ -9,14 +9,15 @@
   }
 
   ListView.prototype.getHtmlString = function() {
-    let list = this.list.getNotes();
+    let list = this.list.notes;
 
     for (var i = 0; i < list.length; i++) {
-      list[i] = list[i].getText();
-      list[i] = list[i].getText().substring(0, 20);
+      list[i] = list[i].text.substring(0, 20);
     }
 
-    return "<ul><li><div>" + list.join("</div></li><li><div>") + "</div></li></ul>";
+    let html_string = "<ul><li><div>" + list.join("</div></li><li><div>") + "</div></li></ul>";
+
+    return html_string;
 
   }
   exports.ListView = ListView;
