@@ -31,7 +31,7 @@
 
       let text = document.getElementById("textarea").value;
       if (text.length != 0) {
-        self.note_list.addNote(text);;
+        self.note_list.addNote(text);
         let app = document.getElementById("app");
         app.innerHTML = self.note_list_view.getHtmlString();
         console.log(`Note ${text} added`);

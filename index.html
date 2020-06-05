@@ -8,18 +8,21 @@
   </head>
 
   <body>
-    <div id="notes"></div>
+    <div id="notes">
+      <p></p>
+    </div>
 
     <div id="app">
       <p></p>
     </div>
-
-    <form id="text" action="#new" method="post">
-      <textarea style="resize: none;" id="textarea" rows="5" cols="50" placeholder="Add new note"></textarea>
-      <p>
-        <button type="submit">Add note</button>
-      </p>
-    </form>
+    <div id="form">
+      <form id="text" action="/new" method="post">
+        <textarea style="resize: none;" id="textarea" rows="5" cols="50" placeholder="Add new note"></textarea>
+        <p>
+          <button type="submit">Add note</button>
+        </p>
+      </form>
+    </div>
 
     <script src="note-model.js" charset="utf-8"></script>
     <script src="note-list-model.js" charset="utf-8"></script>
