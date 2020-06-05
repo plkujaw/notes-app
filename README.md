@@ -1,6 +1,6 @@
 ### Notes app
 
-A frontend, single page app using only pure JavaScript which allows to quickly add short note.
+A frontend, single page app using only pure JavaScript which allows to quickly add short notes.
 
 ### How to setup
 
