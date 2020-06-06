@@ -2,7 +2,11 @@
 
 A frontend, single page app using only pure JavaScript which allows to quickly add short notes.
 
-### How to setup
+### How to run the app
+
+[Click here!](https://plkujaw.github.io/notes-app/)
+
+Or:
 
 -   Clone the git repository
 -   Navigate to the root folder of the project
